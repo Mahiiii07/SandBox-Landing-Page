@@ -1,1 +1,39 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+
+@theme{
+    --color-white : #FEFEFE;
+    --color-pure-white : #FFFFFF;
+    --color-background-blue : #E5F4FD;
+    --color-light-blue : #5EB9F0;
+    --color-light-gray : #60697B;
+    --color-lightest-gray : #AAB0BC;
+    --color-text-gray : #9499A3;
+    --color-dark-gray : #343F52;
+    --color-light-white: #CACACA;
+
+    --spacing-small : 14px;
+    --spacing-large : 864px;
+    /* --spacing-card : 200px; */
+    
+    --font-urbanist: 'Urbanist', sans-serif;
+
+    --text-small:17px;
+    --text-heading:42px;
+    --text-heading-sm:36px
+    /* --text-heading-sm:32px; */
+}
+
+@utility m-inherit {
+  margin: inherit;
+}
+
+:root{
+    --card-width-md:1520px;
+    /* --card-width:556px; */
+    --image-width : 52px; 
+    --width: 550px;
+    --even : 0 0 10px rgba(0, 0, 0, 0.1);
+    --width-large:864px;
+}

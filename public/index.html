@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SandBox Landing Page</title>
+    <link rel="stylesheet" href="./output.css" />
+
+    <!--==================================  Icons Link   ==================================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+    <!--==================================  Fonts Link   ==================================-->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--==================================  Main Section  ==================================-->
+
+    <!------------------------------- Navbar ------------------------------->
+
+    <nav class="max-w-7xl mx-auto px-4">
+        <div class="container flex flex-wrap justify-between items-center py-4">
+            <nav-brand>
+                <a href="#" class="logo">
+                    <img src="../Assets/Logo-SandBox.svg" alt="Sandbox Logo" />
+                </a>
+            </nav-brand>
+
+            
+            <button id="menu-toggle" class="md:hidden text-3xl cursor-pointer">
+                <ion-icon name="close" id="menu-icon"></ion-icon>
+            </button>
+
+            <nav-menu id="nav-menu"
+                class=" md:flex-row justify-between items-center w-full md:w-auto absolute md:relative left-0 bg-white shadow-md transition-all duration-300 ease-in-out z-50">
+                <ul class="flex flex-col md:flex-row md:space-x-6 text-gray-700 w-full md:w-auto p-4 md:p-0">
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Demos</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Pages</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Project</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Blog</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Blocks</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0">
+                        <div class="flex items-center justify-between md:justify-start">
+                            <a href="#"
+                                class="hover:text-light-blue font-urbanist font-semibold text-dark-gray">Documentations</a>
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="h-1.5 ml-1.5" />
+                        </div>
+                    </li>
+                    <li class="py-2 md:py-0 md:pl-2">
+                        <a class="bg-light-blue hover:bg-blue-600 rounded-3xl px-6 py-2 text-white font-urbanist block text-center md:inline-block"
+                            href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav-menu>
+        </div>
+    </nav>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('hidden');
+            const currentIcon = menuIcon.getAttribute('name');
+            menuIcon.setAttribute('name', currentIcon === 'menu' ? 'close' : 'menu');
+        });
+    </script>
+
+
+    <!------------------------------- Page 1 (GET STARTED) ------------------------------->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-10 px-4">
+            <div class="flex flex-wrap md:flex-row justify-between z-0">
+                <div class="w-full md:w-1/2 items-center ">
+                    <div class="md:py-12 md:w-2/3">
+                        <h1 class="text-heading-md text-heading-sm font-semibold font-urbanist text-dark-gray">
+                            A digital agency specializing on
+                            <span class="text-light-blue font-urbanist">mobile design</span>
+                        </h1>
+                        <p class="text-light-gray mb-8 font-urbanist">
+                            We are an award winning design agency that strongly believes in
+                            the power of creative ideas.
+                        </p>
+                        <a href="#"
+                            class="bg-light-blue font-urbanist text-white px-6 py-3 rounded-3xl hover:bg-blue-600">Get
+                            Started</a>
+                    </div>
+                </div>
+                <div class="w-2/3 md:ml-0 ml-14 md:w-1/2 lg:pr-10 mt-10 md:mt-0">
+                    <img src="../Assets/Page1/Mobile_Device.svg" alt="Stunning Websites" />
+                </div>
+            </div>
+            <div class="mx-auto text-center text-light-gray z-10 relative top-2">
+                <div class="font-urbanist">
+                    <p>Trusted by over 2K+ clients across the world</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap md:flex-row justify-between align-center md:-left-7 relative">
+                <img src="../Assets/Page1/Slowave.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Keepsake.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Skybox.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Braillie.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Malory.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Creatink.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+                <img src="../Assets/Page1/Webpoint.png" alt="Clients Logo" class="mx-auto mt-6 h-6" />
+            </div>
+        </div>
+        <div class="">
+            <img src="../Assets/Page1/Vector.svg" class="mx-auto " />
+            <!-- <img src="../Assets/Page1/Vector.png" class="mx-auto mt-6 -left-10"> -->
+        </div>
+        <!------------------------------- Page 2 (WHAT WE DO ?) ------------------------------->
+        <div class="bg-[linear-gradient(to_bottom,_#F0F8FE,_#FFFFFF)] px-4 md:-mt-20  -mt-12 w-full">
+            <div class="mt-10 mx-auto">
+                <div class="text-light-blue font-urbanist md:text-center font-semibold text-xl">
+                    <h2>What We Do?</h2>
+                </div>
+                <div class="font-urbanist md:text-center md:text-heading text-heading-sm font-semibold text-dark-gray">
+                    <h3>
+                        The service we offer is specifically<br />
+                        designed to meet your needs.
+                    </h3>
+                </div>
+            </div>
+            <div class="flex flex-col w-full md:flex-row items-center justify-between mt-16 pb-16 mx-auto max-w-6xl">
+                <div class="md:w-1/3 px-4">
+                    <div class="p-6 hover:shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page2/Web_Design.svg" alt="Icon 1" class="mb-4" />
+                        <h4 class="text-xl font-semibold mb-2 font-urbanist text-dark-gray text-center">
+                            Web Design
+                        </h4>
+
+                        <p class="text-light-gray font-urbanist text-center">
+                            Nulla vitae elit libero, a pharetra augue.<br />
+                            Donec id elit non mi porta gravida at eget.<br />
+                            Fusce dapibus tellus.
+                        </p>
+                        <div class="flex justify-center items-center mt-4">
+                            <a href="#" class="flex items-center font-urbanist text-light-blue font-semibold">
+                                Learn More
+                                <img src="../Assets/Page2/Link_Icon.svg" alt="Arrow Right" class="ml-1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4">
+                    <div class="p-6 hover:shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page2/Graphic Design.svg" alt="Icon 2" class="mb-4" />
+                        <h4 class="text-xl font-semibold mb-2 font-urbanist text-dark-gray text-center">
+                            Graphic Design
+                        </h4>
+
+                        <p class="text-light-gray font-urbanist text-center">
+                            Maecenas faucibus mollis interdum.<br />
+                            Vivamus sagittis lacus vel augue laoreet.<br />
+                            Sed posuere consectetur.
+                        </p>
+                        <div class="flex justify-center items-center mt-4">
+                            <a href="#" class="flex items-center font-urbanist text-light-blue font-semibold">
+                                Learn More
+                                <img src="../Assets/Page2/Link_Icon.svg" alt="Arrow Right" class="ml-1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4">
+                    <div class="p-6 hover:shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page2/3D_Animation.svg" alt="Icon 3" class="mb-4" />
+                        <h4 class="text-xl font-semibold mb-2 font-urbanist text-dark-gray text-center">
+                            3D Animation
+                        </h4>
+
+                        <p class="text-light-gray font-urbanist text-center">
+                            Cras justo odio, dapibus ac facilisis in,<br />
+                            egestas eget quam. Praesent commodo<br />
+                            cursus magna scelerisque.
+                        </p>
+                        <div class="flex justify-center items-center mt-4">
+                            <a href="#" class="flex items-center font-urbanist text-light-blue font-semibold">
+                                Learn More
+                                <img src="../Assets/Page2/Link_Icon.svg" alt="Arrow Right" class="ml-1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------- Page 3 (OUR STRATEGY) ------------------------------->
+
+        <div
+            class="flex flex-wrap items-center md:flex-row justify-between align-center bg-white max-w-7xl mx-auto px-4 py-8">
+            <!------------------------------- Left Section ------------------------------->
+            <div class="w-full md:w-1/2 lg:pr-10">
+                <h1 class="text-light-blue font-urbanist font-semibold text-xl">
+                    OUR STRATEGY
+                </h1>
+                <h2 class="font-urbanist font-semibold text-dark-gray md:text-heading text-heading-sm">
+                    Here are 3 working steps to organize our projects.
+                </h2>
+                <p class="font-urbanist text-light-gray mt-6 text-small">
+                    Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                    vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam
+                    id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus
+                    eget urna mollis.
+                </p>
+                <p class="font-urbanist text-light-gray mt-6 text-small">
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id
+                    ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed
+                    consectetur.
+                </p>
+                <div class="py-10 mb-10">
+                    <a href="#"
+                        class="bg-light-blue font-urbanist text-white px-6 py-3 rounded-3xl hover:bg-blue-600">Learn
+                        More</a>
+                </div>
+            </div>
+
+            <!------------------------------- Right Section ------------------------------->
+
+            <div class="w-full md:w-1/2 lg:pr-10">
+                <!------------------------------- Card - 1 ------------------------------->
+                <div
+                    class="bg-pure-white -mt-8 shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex hover:scale-105">
+                    <div class="px-6 py-10">
+                        <a href="#"
+                            class="bg-background-blue font-urbanist font-semibold text-light-blue px-6 py-5 mt-10 rounded-full text-center justify-center w-12 text-2xl">01</a>
+                    </div>
+                    <div class="py-8">
+                        <div class="text-dark-gray font-semibold text-xl font-urbanist">
+                            Collect Ideas
+                        </div>
+                        <div class="text-light-gray text-small font-urbanist">
+                            Nulla vitae elit libero pharetra augue dapibus.
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------- Card - 2 ------------------------------->
+                <div
+                    class="bg-pure-white shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex md:ml-20 mt-8 hover:scale-105 md:ml-20">
+                    <div class="px-6 py-10">
+                        <a href="#"
+                            class="bg-background-blue font-urbanist font-semibold text-light-blue px-6 py-5 mt-10 rounded-full text-center justify-center w-12 text-2xl">02</a>
+                    </div>
+                    <div class="py-8">
+                        <div class="text-dark-gray font-semibold text-xl font-urbanist">
+                            Data Analysis
+                        </div>
+                        <div class="text-light-gray text-small font-urbanist">
+                            Vivamus sagittis lacus vel augue laoreet.
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------- Card - 3 ------------------------------->
+                <div
+                    class="bg-pure-white mt-8 shadow-(--even) md:ml-6 transition-shadow md:w-(--width) rounded-b-sm md:ml-6 flex hover:scale-105">
+                    <div class="px-6 py-10">
+                        <a href="#"
+                            class="bg-background-blue font-urbanist font-semibold text-light-blue px-6 py-5 mt-10 rounded-full text-center justify-center w-12 text-2xl">03</a>
+                    </div>
+                    <div class="py-8">
+                        <div class="text-dark-gray font-semibold text-xl font-urbanist">
+                            Finalize Product
+                        </div>
+                        <div class="text-light-gray text-small font-urbanist">
+                            Cras mattis consectetur purus sit amet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------- Page - 4 (WHY CHOOSE US?) ------------------------------->
+        <div class="bg-[linear-gradient(to_bottom,_#FFFFFF,_#F0F8FE)] w-full relative py-6">
+            <div class="max-w-6xl mx-auto flex flex-col items-center md:flex-row justify-between">
+                <div class="w-2/3 md:ml-0 ml-14 md:w-full mx-auto">
+                    <img src="../Assets/Page4/Professional_Design.svg" class="" alt="" />
+                </div>
+                <div class="md:w-xl w-full mx-auto md:ml-9 mt-16">
+                    <div class="text-light-blue font-urbanist font-semibold text-xl md:ml-9 px-4">
+                        WHY CHOOSE US?
+                    </div>
+                    <div
+                        class="md:text-heading text-heading-sm text-dark-gray font-semibold md:ml-9 px-4 mt-4 md:w-4/5 font-urbanist">
+                        We bring solutions to make life easier.
+                    </div>
+                    <div class="md:ml-9 px-4 mt-3">
+                        <span class="ml-7">
+                            <img src="../Assets/Page4/Upward_Arrow.svg" alt="" />
+                        </span>
+                        <div class="ml-6 -mt-4 text-lg text-light-blue font-semibold font-urbanist">
+                            Professional Design
+                        </div>
+                    </div>
+                    <div class="md:ml-14 ml-9 text-small text-light-gray mt-4 font-urbanist w-fit">
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                        nibh, ut fermentum massa justo sit amet risus. Cras mattis
+                        consectetur purus sit amet fermentum. Praesent commodo cursus
+                        magna, vel.
+                    </div>
+                    <div class="md:ml-9 px-4">
+                        <span class="ml-7">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" />
+                        </span>
+                        <div class="ml-6 -mt-4 text-lg text-dark-gray font-semibold font-urbanist">
+                            Top Notch
+                        </div>
+                    </div>
+                    <div class="md:ml-9 px-4">
+                        <span class="ml-7">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" />
+                        </span>
+                        <div class="ml-6 -mt-4 text-lg text-dark-gray font-semibold font-urbanist">
+                            Header and Slider Options
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full">
+            <img src="../Assets/Page1/Vector.svg" class="rotate-180" />
+        </div>
+
+        <!------------------------------- Page 5 (COMPANY FACTS) ------------------------------->
+        <div class="max-w-7xl mx-auto px-4 py-10 bg-white">
+            <!------------------------------- Upper Section ------------------------------->
+            <div class="flex flex-col sm:flex-row md:justify-between justify-center">
+                <div class="w-1/4">
+                    <div class="text-light-blue font-urbanist font-semibold text-xl">
+                        Company Facts
+                    </div>
+                    <div class="font-urbanist md:text-heading text-heading-sm text-dark-gray font-semibold md:w-80 mt-4">
+                        We are proud of our design team.
+                    </div>
+                    <div class="font-urbanist text-base text-light-gray md:w-80 mt-6">
+                        Just sit back and relax while we take care of your business needs
+                        for you.
+                    </div>
+                </div>
+                <div class="md:w-container flex flex-col sm:flex-row md:justify-between ">
+                    <div class="md:w-1/3 mx-auto md:ml-0">
+                        <div class="bg-background-blue mt-8 rounded-full w-16 h-16">
+                            <img src="../Assets/Page5/Projects.svg" alt="" class="ml-5.5 py-5" />
+                        </div>
+                        <div
+                            class="md:text-heading text-heading-sm text-dark-gray -ml-6 font-semibold mt-2 font-urbanist">
+                            1000+
+                        </div>
+                        <div class="text-small text-light-gray w-40 -ml-11 mt-2 font-urbanist">
+                            Completed Projects
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 mx-auto md:ml-0">
+                        <div class="bg-background-blue mt-8 rounded-full w-16 h-16">
+                            <img src="../Assets/Page5/Customer.svg" alt="" class="ml-6 py-5" />
+                        </div>
+                        <div
+                            class="md:text-heading text-heading-sm text-dark-gray -ml-5 font-semibold mt-3.5 font-urbanist">
+                            50K+
+                        </div>
+                        <div class="text-small text-light-gray w-40 -ml-10 mt-1.5 font-urbanist">
+                            Happy Customers
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 mx-auto md:ml-0">
+                        <div class="bg-background-blue mt-8 rounded-full w-16 h-16">
+                            <img src="../Assets/Page5/Award.svg" alt="" class="ml-5.5 py-5" />
+                        </div>
+                        <div
+                            class="md:text-heading text-heading-sm text-dark-gray -ml-5 font-semibold mt-2.5 font-urbanist">
+                            20K+
+                        </div>
+                        <div class="text-small text-light-gray w-40 -ml-6 mt-1.5 font-urbanist">
+                            Awards Won
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------- Lower Section ------------------------------->
+
+            <div class="flex flex-col sm:flex-row sm:flex-wrap md:justify-center justify-between mt-10">
+                <div class="shadow-(--even) transition-shadow rounded-b-sm lg:w-1/5 hover:scale-105 mb-10">
+                    <img src="../Assets/Page5/Card1.png " alt="Clients Logo"
+                        class="rounded-full py-10 ml-10 h-44 w-24" />
+                    <div class="text-xl text-dark-gray ml-10 -mt-4 font-semibold font-urbanist">
+                        Coriss Ambady
+                    </div>
+                    <div class="text-sm text-lightest-gray mt-2 ml-10 font-urbanist font-semibold">
+                        FINANCIAL ANALYST
+                    </div>
+                    <div class="text-small text-light-gray mt-2 ml-10 font-urbanist w-2/3">
+                        Fermentum massa justo sit amet risus morbi leo.
+                    </div>
+                    <div class="flex ml-10 mt-2 mb-10">
+                        <img src="../Assets/Page5/Twitter.svg" alt="" class="w-6 h-6 hover:scale-110" />
+                        <img src="../Assets/Page5/Facebook.svg" alt="" class="w-6 h-6 hover:scale-110 ml-2" />
+                        <img src="../Assets/Page5/Globe.svg" alt="" class="w-6 h-8 hover:scale-110 -mt-0.5" />
+                    </div>
+                </div>
+
+                <div class="shadow-(--even) transition-shadow rounded-b-sm lg:w-1/5 hover:scale-105 mb-10">
+                    <img src="../Assets/Page5/Card2.png " alt="Clients Logo"
+                        class="rounded-full py-10 ml-10 h-44 w-24" />
+                    <div class="text-xl text-dark-gray ml-10 -mt-4 font-semibold font-urbanist">
+                        Cory Zamora
+                    </div>
+                    <div class="text-sm text-lightest-gray mt-2 ml-10 font-urbanist font-semibold">
+                        MARKETING SPECIALIST
+                    </div>
+                    <div class="text-small text-light-gray mt-2 ml-10 font-urbanist w-2/3">
+                        Fermentum massa justo sit amet risus morbi leo.
+                    </div>
+                    <div class="flex ml-10 mt-2 mb-10">
+                        <img src="../Assets/Page5/Twitter.svg" alt="" class="w-6 h-6 hover:scale-110" />
+                        <img src="../Assets/Page5/Facebook.svg" alt="" class="w-6 h-6 hover:scale-110 ml-2" />
+                        <img src="../Assets/Page5/Globe.svg" alt="" class="w-6 h-8 hover:scale-110 -mt-0.5" />
+                    </div>
+                </div>
+                <div class="shadow-(--even) transition-shadow rounded-b-sm lg:w-1/5 hover:scale-105 mb-10">
+                    <img src="../Assets/Page5/Card3.png " alt="Clients Logo"
+                        class="rounded-full py-10 ml-10 h-44 w-24" />
+                    <div class="text-xl text-dark-gray ml-10 -mt-4 font-semibold font-urbanist">
+                        Nikolas Brooten
+                    </div>
+                    <div class="text-sm text-lightest-gray mt-2 ml-10 font-urbanist font-semibold">
+                        SALES MANAGER
+                    </div>
+                    <div class="text-small text-light-gray mt-2 ml-10 font-urbanist w-2/3">
+                        Fermentum massa justo sit amet risus morbi leo.
+                    </div>
+                    <div class="flex ml-10 mt-2 mb-10">
+                        <img src="../Assets/Page5/Twitter.svg" alt="" class="w-6 h-6 hover:scale-110" />
+                        <img src="../Assets/Page5/Facebook.svg" alt="" class="w-6 h-6 hover:scale-110 ml-2" />
+                        <img src="../Assets/Page5/Globe.svg" alt="" class="w-6 h-8 hover:scale-110 -mt-0.5" />
+                    </div>
+                </div>
+                <div class="shadow-(--even) transition-shadow rounded-b-sm lg:w-1/5 hover:scale-105 mb-10">
+                    <img src="../Assets/Page5/Card4.png " alt="Clients Logo"
+                        class="rounded-full py-10 ml-10 h-44 w-24" />
+                    <div class="text-xl text-dark-gray ml-10 -mt-4 font-semibold font-urbanist">
+                        Jackie Sanders
+                    </div>
+                    <div class="text-sm text-lightest-gray mt-2 ml-10 font-urbanist font-semibold">
+                        INVESTMENT PLANNER
+                    </div>
+                    <div class="text-small text-light-gray mt-2 ml-10 font-urbanist w-2/3">
+                        Fermentum massa justo sit amet risus morbi leo.
+                    </div>
+                    <div class="flex ml-10 mt-2 mb-10">
+                        <img src="../Assets/Page5/Twitter.svg" alt="" class="w-6 h-6 hover:scale-110" />
+                        <img src="../Assets/Page5/Facebook.svg" alt="" class="w-6 h-6 hover:scale-110 ml-2" />
+                        <img src="../Assets/Page5/Globe.svg" alt="" class="w-6 h-8 hover:scale-110 -mt-0.5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------- Page 6 (LATEST PROJECTS) ------------------------------->
+        <div class="max-w-7xl mx-auto px-4 py-10 bg-white">
+            <div class="">
+                <div class="text-light-blue font-urbanist md:text-center font-semibold text-xl">
+                    LATEST PROJECTS
+                </div>
+                <div
+                    class="font-urbanist md:text-heading md:text-center text-heading-sm mx-auto text-dark-gray font-semibold mt-2">
+                    Check out some of our awesome projects with creative ideas and great
+                    design.
+                </div>
+            </div>
+            <!------------------------------- Carousel ------------------------------->
+            <div class="flex flex-wrap sm:flex-row sm:flex-wrap py-8 mx-auto justify-center align-center">
+                <div class="mx-6">
+                    <div>
+                        <img src="../Assets/Page6/carousel_image_1.png.png" alt="" class="w-118" />
+                    </div>
+                    <div class="mt-8 text-dark-gray font-semibold font-urbanist text-2xl">
+                        Cras Fermentum Sem
+                    </div>
+                    <div class="mt-3 text-sm text-text-gray font-urbanist font-semibold">
+                        MOBILE DESIGN
+                    </div>
+                </div>
+                <div class="mx-6">
+                    <div class="">
+                        <img src="../Assets/Page6/carousel_image_2.png.png" alt="" class="w-118" />
+                    </div>
+                    <div class="mt-8 text-dark-gray font-semibold font-urbanist text-2xl">
+                        Venenatis Euismod Vehicula
+                    </div>
+                    <div class="mt-3 text-sm text-text-gray font-urbanist font-semibold">
+                        WEB DESIGN
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto flex flex-wrap sm:flex-row justify-center -mt-4 hover:bg-blue-500">
+                <div class="bg-background-blue rounded-full">
+                    <!-- <img src="../Assets/Page5/Projects.svg" alt="" class="ml-5.5 py-5"> -->
+                    <img src="../Assets/Page6/Left_Icon.svg" alt="" class="py-4 px-4" />
+                </div>
+                <div class="bg-background-blue rounded-full ml-5">
+                    <!-- <img src="../Assets/Page5/Projects.svg" alt="" class=""> -->
+                    <img src="../Assets/Page6/Right_Icon.svg" alt="" class="py-4 px-4" />
+                </div>
+            </div>
+        </div>
+        <div class="  ">
+            <img src="../Assets/Page1/Vector.svg" class="mx-auto mt-6" />
+            <!-- <img src="../Assets/Page1/Vector.png" class="mx-auto mt-6 -left-10"> -->
+        </div>
+
+        <!------------------------------- Page 7 (HAPPY CUSTOMERS) ------------------------------->
+        <div class="bg-[linear-gradient(to_bottom,_#F0F8FE,_#FFFFFF)] -mt-20 px-4">
+            <div class="mt-16 mx-auto">
+                <div class="text-light-blue font-urbanist text-center font-semibold text-xl">
+                    <h2>HAPPY CUSTOMERS</h2>
+                </div>
+                <div class="font-urbanist md:text-center md:text-heading text-heading-sm font-semibold text-dark-gray">
+                    Don't take our word for it. See what <br />
+                    customers are saying about us.
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between mt-16 pb-16 mx-auto max-w-7xl ">
+                <div class="md:w-114 relative px-4 rounded-b-sm mt-8">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300 hover:scale-105">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                            auctor. Vestibulum id ligula porta felis euismod semper. Cras
+                            justo odio dapibus facilisis sociis natoque penatibus.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row mt-6">
+                            <img src="../Assets/Page5/Card1.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Coriss Ambady
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Financial Analyst
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-114 px-4 rounded-b-sm mt-8 hover:scale-105">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Fusce dapibus, tellus ac cursus tortor mauris condimentum
+                            fermentum massa justo sit amet. Vivamus sagittis lacus vel augue
+                            laoreet rutrum faucibus dolor auctor. Cras mattis consectetur
+                            purus sit amet fermentum. Aenean lacinia bibendum nulla sed.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row mt-6">
+                            <img src="../Assets/Page5/Card2.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Cory Zamora
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Marketing Specialist
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-114 px-4 rounded-b-sm mt-8 hover:scale-105">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300 rounded-b-sm">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel
+                            augue laoreet rutrum faucibus dolor auctor. Nullam quis risus
+                            eget porta ac consectetur vestibulum. Donec sed odio dui
+                            consectetur adipiscing elit.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row mt-6">
+                            <img src="../Assets/Page5/Card3.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Nikolas Brooten
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Sales Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row items-center justify-between pb-16 mx-auto max-w-7xl relative md:-mt-20 -mt-8">
+                <div class="md:w-114 relative px-4 rounded-b-sm md:-mt-10 hover:scale-105">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Etiam adipiscing tincidunt elit convallis felis suscipit ut.
+                            Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris.
+                            Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean
+                            tortor libero condimentum ac laoreet vitae.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row mt-6">
+                            <img src="../Assets/Page5/Card2.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Coriss Ambady
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Financial Analyst
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-114 relative px-4 rounded-b-sm md:mt-10 mt-8 hover:scale-105">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Donec id elit non mi porta gravida at eget metus. Nulla vitae
+                            elit libero, a pharetra augue. Cum sociis natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row md:mt-6">
+                            <img src="../Assets/Page5/Card1.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Laura Widerski
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Sales Specialist
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-114 relative px-4 rounded-b-sm md:-mt-4 mt-8 hover:scale-105">
+                    <div class="p-6 shadow-(--even) transition-shadow duration-300 rounded-b-sm">
+                        <img src="../Assets/Page7/stars.svg" alt="Icon 1" class="mb-4 rounded-full" />
+                        <p class="text-light-gray font-urbanist">
+                            “Maecenas sed diam eget risus varius blandit sit amet non magna.
+                            Cum sociis natoque penatibus magnis dis montes, nascetur
+                            ridiculus mus. Donec sed odio dui. Nulla vitae elit libero.”
+                        </p>
+                        <div class="flex flex-wrap md:flex-row mt-6">
+                            <img src="../Assets/Page5/Card3.png " alt="Clients Logo"
+                                class="rounded-full mt-4 h-14 w-12" />
+                            <div class="mt-4 ml-5">
+                                <div class="text-dark-gray font-semibold font-urbanist">
+                                    Jackie Sanders
+                                </div>
+                                <div class="text-sm text-lightest-gray font-urbanist">
+                                    Investment Planner
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------- Page 8 (FAQs) ------------------------------->
+        <div class="max-w-7xl mx-auto px-4 -top bg-white">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 lg:pr-10 pr-10">
+                    <div class="py-12 -mt-16">
+                        <div class="text-light-blue font-urbanist px-4 font-semibold text-xl">
+                            FAQ
+                        </div>
+                        <h1
+                            class="md:text-heading text-heading-sm font-semibold mb-6 font-urbanist text-dark-gray ml-small mt-4">
+                            If you don't see an answer to your question, you can send us an
+                            email from our contact form.
+                        </h1>
+                        <p class="text-light-gray mb-8 font-urbanist ml-small">
+                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                            eget lacinia odio sem nec elit. Nullam quis risus eget urna
+                            mollis ornare.
+                        </p>
+
+                        <a href="#"
+                            class="bg-light-blue font-urbanist text-white px-6 py-3 rounded-3xl ml-small hover:bg-blue-600">ALL
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 lg:pr-10">
+                    <!------------------------------- Card - 1 ------------------------------->
+                    <div
+                        class="bg-pure-white shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex hover:scale-105">
+                        <div class="   ">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="ml-6 h-1.5 mt-6" />
+                        </div>
+                        <div class="py-4">
+                            <div class="text-dark-gray font-semibold text-xl font-urbanist ml-6 -mt-3">
+                                How do I get my subscription receipt?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------------------- Card - 2 ------------------------------->
+                    <div
+                        class="bg-pure-white shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex hover:scale-105 mt-6">
+                        <div class="   ">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="ml-6 h-1.5 mt-6" />
+                        </div>
+                        <div class="py-4">
+                            <div class="text-dark-gray font-semibold text-xl font-urbanist ml-6 -mt-3">
+                                Are there any discounts for people in need?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------------------- Card - 3 ------------------------------->
+                    <div
+                        class="bg-pure-white shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex hover:scale-105 mt-6">
+                        <div class="   ">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="ml-6 h-1.5 mt-6" />
+                        </div>
+                        <div class="py-4">
+                            <div class="text-dark-gray font-semibold text-xl font-urbanist ml-6 -mt-3">
+                                Do you offer a free trial edit?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------------------- Card - 4 ------------------------------->
+                    <div
+                        class="bg-pure-white shadow-(--even) transition-shadow md:w-(--width) rounded-b-sm flex hover:scale-105 mt-6">
+                        <div class="   ">
+                            <img src="../Assets/Page1/Downward_Arrow.svg" alt="" class="ml-6 h-1.5 mt-6" />
+                        </div>
+                        <div class="py-4">
+                            <div class="text-dark-gray font-semibold text-xl font-urbanist ml-6 -mt-3">
+                                How do I reset my Account password?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <img src="../Assets/Page7/dark_vector.svg" class="mx-auto mt-6" />
+            <!-- <img src="../Assets/Page1/Vector.png" class="mx-auto mt-6 -left-10"> -->
+        </div>
+    </div>
+
+    <!--==================================  Footer Section  ==================================-->
+    <footer class="bg-dark-gray font-urbanist h-96 -mt-4">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="flex flex-wrap md:flex-row ml-10">
+                <div class="md:text-heading text-heading-sm font-semibold text-white w-2/3">
+                    Join our community by using our services and grow your business.
+                </div>
+                <div class="py-10 ml-14">
+                    <a href="#"
+                        class="bg-light-blue font-urbanist text-white px-6 py-3 rounded-3xl ml-small hover:bg-blue-600">Try
+                        It For Free
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-8 mx-4 border-t border-light-white mt-4" />
+
+            <div class="flex flex-col md:flex-row px-10 py-10 justify-between">
+                <div class="mt-4">
+                    <a href="#" class="inline-flex items-center">
+                        <img src="../Assets/logo-light.svg" alt="Logo" class="h-6" />
+                    </a>
+                    <p class="text-light-white mt-4 text-sm">
+                        © 2023 Sandbox.<br />All rights reserved.
+                    </p>
+                    <div class="flex mt-4">
+                        <a href="#" class=""><img src="../Assets/Footer/Twitter.svg" alt="" /></a>
+                        <a href="#" class="ml-2"><img src="../Assets/Footer/Facebook.svg" alt="" /></a>
+                        <a href="#" class="ml-2"><img src="../Assets/Footer/Globe.svg" alt="" /></a>
+                        <a href="#" class="ml-2"><img src="../Assets/Footer/Instagram.svg" alt="" /></a>
+                        <a href="#" class="ml-2"><img src="../Assets/Footer/Youtube.svg" alt="" /></a>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h3 class="font-semibold mb-3 text-lg text-white mt-4">
+                        Get in Touch
+                    </h3>
+                    <p class="text-light-white text-sm leading-6">
+                        Moonshine St. 14/05<br />
+                        Light City, London,<br />
+                        United Kingdom
+                    </p>
+                    <p class="text-light-white text-sm mt-4">
+                        info@email.com<br />(123) 456 78 90
+                    </p>
+                </div>
+
+                <div class="">
+                    <h3 class="font-semibold mb-3 text-lg text-white mt-4">
+                        Learn More
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="text-light-white transition ">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light-white transition">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light-white transition">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light-white transition">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light-white transition">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <h3 class="font-semibold mb-3 text-lg text-white mt-4">
+                        Our Newsletter
+                    </h3>
+                    <p class="text-light-white text-sm mb-4">
+                        Subscribe to our newsletter to get our news & deals delivered to
+                        you.
+                    </p>
+                    <form class="flex flex-col sm:flex-row items-center">
+                        <input type="email" placeholder="Email Address"
+                            class="px-4 py-2 rounded-md text-light-white w-full sm:w-auto flex-grow focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        <button type="submit"
+                            class="bg-light-blue hover:bg-blue-500 px-5 py-2 text-white transition w-1/3 sm:w-auto">
+                            Join
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
